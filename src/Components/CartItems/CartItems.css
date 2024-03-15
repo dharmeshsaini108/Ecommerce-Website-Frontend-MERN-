@@ -1,0 +1,102 @@
+.cartitems {
+    width: 100%;
+    max-width: 800px; /* Adjust max-width according to your design */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cartitems-format-main,
+.cartitems-format {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive grid layout */
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.cartitems-format-main p,
+.cartitems-format p {
+    text-align: center;
+}
+
+.cartitems-quantity {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.cartitems img {
+    max-width: 100%;
+    height: auto;
+}
+
+.checkout-section {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.cart-total, .promo-code, .checkout-button {
+    margin-bottom: 10px;
+}
+
+.promo-code input[type="text"] {
+    width: calc(100% - 80px); /* Adjust input width */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.promo-code button {
+    width: 80px; /* Adjust button width */
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4141;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.checkout-button button {
+    width: 100%; /* Adjust button width */
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4141;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .cartitems-format-main,
+    .cartitems-format {
+        grid-template-columns: repeat(2, 1fr); /* Display items in 2 columns on smaller screens */
+    }
+
+    .cartitems-quantity {
+        width: 30px; /* Adjusted width for smaller screens */
+        height: 30px; /* Adjusted height for smaller screens */
+        font-size: 12px; /* Adjusted font size for smaller screens */
+    }
+    
+    .checkout-section {
+        padding-top: 10px; /* Adjusted padding for smaller screens */
+    }
+    
+    .promo-code input[type="text"] {
+        width: calc(100% - 100px); /* Adjusted input width for smaller screens */
+    }
+    
+    .promo-code button {
+        width: 100px; /* Adjusted button width for smaller screens */
+    }
+}
